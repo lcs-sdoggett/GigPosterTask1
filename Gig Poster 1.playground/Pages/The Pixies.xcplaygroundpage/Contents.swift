@@ -30,6 +30,11 @@ let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
 
 // Begin your solution here...
 
+canvas.fillColor = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+canvas.drawRectangle(at: CGPoint(x: 0, y: 0), width: canvas.width, height: canvas.height)
+
+
+
 
 /*:
  ## Use Source Control
