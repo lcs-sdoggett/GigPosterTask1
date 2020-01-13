@@ -30,10 +30,28 @@ let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
 
 // Begin your solution here...
 
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+
+// Draw background
 canvas.fillColor = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
 canvas.drawRectangle(at: CGPoint(x: 0, y: 0), width: canvas.width, height: canvas.height)
 
+// Draw black square
+canvas.fillColor = Color.black
+canvas.drawRectangle(at: CGPoint(x: 0, y: 0), width: canvas.width, height: 400)
 
+
+// Draw circles
+for x in 0...10 {
+
+    for y in 0...10{
+
+    
+        canvas.fillColor = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+        canvas.drawEllipse(at: CGPoint(x: x * 40, y: y * 40), width: 35, height: 35)
+    }
+}
 
 
 /*:
