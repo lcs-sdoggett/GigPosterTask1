@@ -46,12 +46,39 @@ canvas.drawRectangle(at: CGPoint(x: 0, y: 0), width: canvas.width, height: 400)
 for x in 0...10 {
 
     for y in 0...10{
-
-    
-        canvas.fillColor = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+        
+        let colour = y + x
+        
+        if x == 0 || y == 0 {
+            canvas.fillColor = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+        } else if colour > 10 {
+            canvas.fillColor = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+        } else {
+            canvas.fillColor = Color.white
+        }
+        
         canvas.drawEllipse(at: CGPoint(x: x * 40, y: y * 40), width: 35, height: 35)
     }
 }
+
+// White text
+
+canvas.drawText(message: "pixies", at: CGPoint(x: 10, y: 410), size: 70, kerning: 0.0)
+canvas.drawText(message: "saturday", at: CGPoint(x: 10, y: 550), size: 10, kerning: 0.0)
+canvas.drawText(message: "december 13 1986", at: CGPoint(x: 10, y: 535), size: 10, kerning: 0.0)
+canvas.drawText(message: "9 pm over 21", at: CGPoint(x: 10, y: 520), size: 10, kerning: 0.0)
+canvas.drawText(message: "at the rat", at: CGPoint(x: 260, y: 550), size: 10, kerning: 0.0)
+canvas.drawText(message: "538 commonwealth", at: CGPoint(x: 260, y: 535), size: 10, kerning: 0.0)
+canvas.drawText(message: "boston, mass.", at: CGPoint(x: 260, y: 520), size: 10, kerning: 0.0)
+
+canvas.textColor = Color.white
+canvas.drawText(message: "with", at: CGPoint(x: 260, y: 460), size: 13, kerning: 0.0)
+canvas.drawText(message: "throwing muses", at: CGPoint(x: 260, y: 445), size: 13, kerning: 0.0)
+canvas.drawText(message: "big dipper", at: CGPoint(x: 260, y: 430), size: 13, kerning: 0.0)
+
+
+
+
 
 
 /*:
